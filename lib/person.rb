@@ -5,4 +5,6 @@ class Person
     @attribute = attribute
   end
   
+  attributes.each {|key, value| self.send(("#{key}="), value)}
+  
 end
